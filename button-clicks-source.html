@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+    <!-- Navbar (sit on top) -->
+	<div class="w3-top">
+	  <div class="w3-bar w3-white w3-card" id="myNavbar">
+	    <a href="index.html#home" class="w3-bar-item w3-button w3-wide">IAN HUTCHCRAFT</a>
+	    <!-- Right-sided navbar links -->
+	    <div class="w3-right w3-hide-small">
+	      <a href="index.html#about" class="w3-bar-item w3-button"><i class="fa fa-user-o"></i> ABOUT</a>
+	      <a href="index.html#work" class="w3-bar-item w3-button"><i class="fa fa-laptop"></i> WORK</a>
+	      <div class="w3-dropdown-hover w3-hide-small">
+		    <a href="index.html#examples"><button class="w3-button" title="Notifications"><i class="fa fa-keyboard-o"></i> EXAMPLES <i class="fa fa-caret-down"></i></button></a>
+		    <div class="w3-dropdown-content w3-card-4 w3-bar-block">
+		      <a href="space-defense.html" class="w3-bar-item w3-button">Space Defense Force 9 Game</a>
+		      <a href="button-clicks.html" class="w3-bar-item w3-button">Button Clicks Game</a>
+		      <a href="button-clicks-source.html" class="w3-bar-item w3-button">Button Clicks Source</a>
+		    </div>
+		  </div>
+		  <a href="index.html#projects" class="w3-bar-item w3-button"><i class="fa fa-mortar-board"></i> PROJECTS</a>
+		  <a href="index.html#hobbies" class="w3-bar-item w3-button"><i class="fa fa-wrench"></i> HOBBIES</a>
+	      <a href="index.html#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
+	    </div>
+	    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+	    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+	      <i class="fa fa-bars"></i>
+	    </a>
+	  </div>
+	</div>
+
+	<!-- Sidebar on small screens when clicking the menu icon -->
+	<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+	  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close �</a>
+	  <a href="index.html#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
+	  <a href="index.html#work" onclick="w3_close()" class="w3-bar-item w3-button">WORK</a>
+	  <a href="index.html#examples" onclick="w3_close()" class="w3-bar-item w3-button">EXAMPLES</a>
+	  <a href="index.html#projects" onclick="w3_close()" class="w3-bar-item w3-button">PROJECTS</a>
+	  <a href="index.html#hobbies" onclick="w3_close()" class="w3-bar-item w3-button">HOBBIES</a>
+	  <a href="index.html#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+	</nav>
+
+<div class="container  w3-grey">
+  <div class="panel-group" id="accordion" style="padding-top:50px;">
+   <h2 style="color:#ffffff;">Button Clicks Source</h2>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse1" onclick="w3CodeColor(highlightDivHTML)">HTML Source Code</a>
+        </h4>
+      </div>
+      <div id="collapse1" class="panel-collapse collapse">
+    	<pre class="prettyprint">
+&lt;html&gt;
+&lt;head&gt;
+	&lt;meta charset="UTF-8"&gt;
+	&lt;title&gt;Ian Hutchcraft: Button Clicks&lt;/title&gt;
+	&lt;link href="buttonClicks/buttonClicksStyleSheet.css" rel="stylesheet" type="text/css"&gt;
+	&lt;link rel="stylesheet" href="buttonClicks/jAlert-master/src/jAlert-v3.css" /&gt;
+	&lt;script src="buttonClicks/jquery-2.1.4.min.js"&gt;&lt;/script&gt;
+	&lt;script src="buttonClicks/jAlert-master/src/jAlert-v3.js"&gt;&lt;/script&gt;
+	&lt;script src="buttonClicks/jAlert-master/src/jAlert-functions.js"&gt;&lt;/script&gt;
+	&lt;script type="text/javascript" src="buttonClicks/buttonClicks.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;!-- Begin game container --&gt;
+	&lt;div class="container"&gt;
+		&lt;div class="menuDiv" style="float: right"&gt;
+			&lt;ul class="menu"&gt;
+	  			&lt;li&gt;
+	  				&lt;a href="#"&gt;&lt;img class="menuImage" src="buttonClicks/imagery/menuButton.png" /&gt;&lt;/a&gt;
+	  				&lt;ul&gt;
+	  					&lt;li&gt;&lt;span&gt;&lt;a href="#"  class="menuItem" value="Instructions" onclick="instructions();"&gt;Instructions&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
+	  					&lt;li&gt;&lt;span&gt;&lt;a href="#"  class="menuItem" value="Stats" onclick="clickStats();"&gt;Stats&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
+	  					&lt;li&gt;&lt;span&gt;&lt;a href="#"  class="menuItem" value="Reset" onclick="clickReset();"&gt;Reset&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;span&gt;&lt;a href="#"  class="menuItem" value="New Game" onclick="clickNewGame();"&gt;New Game&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;span&gt;&lt;a href="http://ianhutchcraft.com/"  class="menuItem" value="Quit"&gt;Quit&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
+	  				&lt;/ul&gt;
+	  			&lt;/li&gt;
+	  		&lt;/ul&gt;
+		&lt;/div&gt;
+		&lt;header style="text-align: center"&gt;Button Clicks&lt;/header&gt;
+	  	&lt;h2 style="text-align: center" class="title"&gt;Set Difficulty&lt;/h2&gt;
+	  	&lt;h3 style="text-align: center" class="stats"&gt;&lt;/h3&gt;
+	  	&lt;article class="contentWrap"&gt;
+			&lt;article class="content"&gt;
+				&lt;input id="easy" type="button" value="Easy" onclick="setDifficulty(this.id);" style="float: left; width: 110px;" /&gt;
+				&lt;input id="medium" type="button" value="Medium" onclick="setDifficulty(this.id);" style="float: left; width: 110px;" /&gt;
+				&lt;input id="hard" type="button" value="Hard" onclick="setDifficulty(this.id);" style="float: left; width: 110px;" /&gt;
+				&lt;input id="insanity" type="button" value="Insanity" onclick="setDifficulty(this.id);" style="float: left; width: 110px;" /&gt;
+				&lt;div class="instructions"&gt;&lt;/div&gt;
+			&lt;/article&gt;
+		&lt;/article&gt;
+	&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+    	</pre>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse2" onclick="w3CodeColor(highlightDivCSS)">CSS Source Code</a>
+        </h4>
+      </div>
+      <div id="collapse2" class="panel-collapse collapse">
+        <div class="panel-body" id="highlightDivCSS">
+			<pre class="prettyprint">
+@charset "utf-8";
+body {
+	font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
+	background-color: #FFFFFF;
+	margin: 0;
+	padding: 0;
+	color: #FFFFFF;
+}
+/* Element/tag selectors */
+ul, ol, dl {
+	padding: 0;
+	margin: 0;
+}
+h1, h2, h3, h4, h5, h6, p {
+	margin-top: 0;
+	padding-right: 15px;
+	padding-left: 15px;
+}
+
+.container {
+	height: 100%;
+	padding-top: 50px;
+	width: 1000px;
+	background-color: #FFFFFF;
+	margin: 0 auto;
+}
+
+header {
+	margin: 0 auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	background-color: #FFFFFF;
+	font-size: 40px;
+	font-weight: bold;
+	width: 500px;
+	color: #56BBFF;
+	-moz-border-radius: 100%;
+    -webkit-border-radius: 100%;
+	border: 5px solid #A2ADE5;
+	border-radius:25px;
+}
+
+.menu{
+	float: right;
+	display: block;
+	margin: 0px;
+	padding: 0px;
+	position: absolute;
+	list-style: none;
+
+}
+
+.menu li{
+	position: relative;
+	display: block;
+}
+
+.title{
+	margin: 0 auto;
+	margin-bottom: 10px;
+	background-color: #FFFFFF;
+	color: #56BBFF;
+	width: 700px;
+	-moz-border-radius: 100%;
+    -webkit-border-radius: 100%;
+	border: 5px solid #A2ADE5;
+	border-radius:25px;
+}
+
+.endMessage {
+	margin: 0 auto;
+	margin-bottom: 10px;
+	background-color: #FFFFFF;
+	color: #56BBFF;
+}
+
+.stats{
+	margin: 0 auto;
+	margin-top: 20px;
+	margin-bottom: 10px;
+	background-color: #FFFFFF;
+	color: #56BBFF;
+	width: 825px;
+	-moz-border-radius: 100%;
+    -webkit-border-radius: 100%;
+	border: 5px solid #A2ADE5;
+	border-radius:25px;
+}
+
+.contentWrap{
+	height: auto;
+	float: left;
+	width: 990px;
+	background-color: #FFFFFF;
+	-moz-border-radius: 100%;
+    -webkit-border-radius: 100%;
+	border: 5px solid #A2ADE5;
+	border-radius:25px;
+}
+.content {
+	height: auto;
+	padding-top: 5px;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+	margin: 0 auto;
+	width: 500px;
+	background-color: #FFFFFF;
+	-moz-border-radius: 100%;
+    -webkit-border-radius: 100%;
+	border-radius:25px;
+}
+
+.content ul, .content ol {
+	padding: 0 15px 15px 40px;
+}
+
+input[type="button"]{
+	padding: 10px 10px 10px 10px;
+	margin-bottom: 10px;
+	margin-left: 5px;
+	display: block;
+	width: 95px;
+	text-decoration: none;
+	background-color: #56BBFF;
+	color: #FFFFFF;
+	-moz-border-radius: 100%;
+    -webkit-border-radius: 100%;
+	border: 5px solid #A2ADE5;
+	border-radius:25px;
+	font-size:12px;
+	font-weight:bold;
+}
+
+input[type="button"]:focus {outline:0 !important;}
+
+input[type="button"]:hover{
+	background-color: #759999;
+	color: #FFFFFF;
+}
+
+span{
+	display: block;
+	float: right;
+	width: 110px;
+	text-decoration: none;
+	background-color: #FFFFFF;
+	-moz-border-radius: 100%;
+    -webkit-border-radius: 100%;
+	border: 4px solid #FFFFFF;
+	border-radius: 25px;
+}
+
+.menuItem {
+	text-align: center;
+	text-decoration: none;
+	display: block;
+	float: right;
+	width: 100px;
+	text-decoration: none;
+	background-color: #56BBFF;
+	color: #FFFFFF;
+	-moz-border-radius: 100%;
+    -webkit-border-radius: 100%;
+	border: 3px solid #A2ADE5;
+	border-radius: 25px;
+	font-size: 10px;
+	font-weight: bold;
+}
+
+.menuItem:hover{
+	text-decoration: none;
+	background-color: #759999;
+	color: #FFFFFF;
+}
+
+.ui-dialog-osx {
+    -moz-border-radius: 0 0 8px 8px;
+    -webkit-border-radius: 0 0 8px 8px;
+    border-radius: 0 0 8px 8px; border-width: 0 8px 8px 8px;
+}
+
+/*HTML 5 support - Sets new HTML 5 tags to display:block so browsers know how to render the tags properly. */
+header, section, footer, aside, article, figure {
+	display: block;
+}
+			</pre>
+		</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse3" onclick="w3CodeColor(highlightDivJS)">Javascript Source Code</a>
+        </h4>
+      </div>
+      <div id="collapse3" class="panel-collapse collapse">
+        <div class="panel-body" id="highlightDivJS">
+			<pre class="prettyprint">
+$(document).ready(function () {
+	window.highScore = 0;
+	window.score = 0;
+	window.wins = 0;
+	window.winStreak = 0;
+	window.gamesPlayed = 0;
+	window.buttonClicks = 0;
+	window.statsOpen = false;
+	window.resetable = false;
+	window.easterEgg = 0;
+
+	$(".stats").hide();
+	$('.menu li ul').hide();
+
+		$('.menuImage').hover(
+		function () {
+			this.src = "buttonClicks/imagery/menuButtonHover.png";
+		},
+		function () {
+			this.src = "buttonClicks/imagery/menuButton.png";
+		}
+	);
+
+	$('.menu li').hover(
+		function () { //appearing on hover
+			$('ul', this).fadeIn();
+		},
+		function () { //disappearing on hover
+			$('ul', this).fadeOut();
+		}
+	);
+});
+
+function setDifficulty(clickId, clickValue){
+	var difficultyButtonClicked = document.getElementById(clickId);
+	var difficultyButtonClickedId = difficultyButtonClicked.value;
+	var elementInputs = document.getElementsByTagName("input");
+
+	window.difficultyValue = clickId;
+
+	$(".title").fadeOut(750);
+	$(".contentWrap").fadeOut(750);
+	$(elementInputs).fadeOut(750);
+
+	if(window.statsOpen == true){
+		$(".stats").fadeOut(750);
+	}
+
+	if (difficultyButtonClickedId){
+		setTimeout(function(){
+			$(elementInputs).remove();
+			elementInputs = null;
+			difficultySelected(difficultyButtonClickedId);
+		}, 750);
+	}else{
+		alert('ERROR: No Compatiable Difficulty Selected');
+	}
+
+}
+
+function difficultySelected(difficulty){
+	var elementInputs = document.getElementsByTagName("input");
+	window.difficulty = difficulty;
+	window.easterEgg = Math.floor((Math.random() * 20) + 7);
+
+	setTimeout(function(){
+		$(elementInputs).remove();
+		elementInputs = null;
+
+		$(".title").html("Pick A Grid Size").hide().fadeIn(750);
+		if(window.statsOpen == true){
+			$(".stats").html("Buttons Clicked: " + window.buttonClicks + ", Games Played: " + window.gamesPlayed + ", Wins: " + window.wins + ", Win Streak: " + window.winStreak).hide().fadeIn(750);//stats
+		}
+
+		for(var i = 1; i &amp;lt; 5; i++){
+			buttonGridSize = document.createElement("input");
+			buttonGridSize.type = "button";
+			buttonGridSize.style.cssFloat = 'left';
+			buttonGridSize.style.width = '100px';
+			buttonGridSize.value = i * 10;
+			buttonGridSize.id = "clickSelection" + i;
+			buttonGridSize.onclick = function(){buildComparisonArray(this.value); buildButtonGrid(this.value);};
+			$(".contentWrap").hide().fadeIn(750);
+			$(".content").append($(buttonGridSize)).hide().fadeIn(750);
+		}
+
+	}, 750);
+}
+
+function buildComparisonArray(gridSize){
+	var difficultyValue = window.difficultyValue
+	window.gridSize = parseInt(gridSize)
+	comparisonArray = [];
+
+	for (var count = 0; count &amp;lt;= (gridSize * difficultyValue) + 1; count++){
+		comparisonArray[count] = count;
+	}
+
+	for(var j, x, i = comparisonArray.length; i; j = parseInt(Math.random() * i), x = comparisonArray[--i], comparisonArray[i] = comparisonArray[j], comparisonArray[j] = x);
+	window.comparisonArray = comparisonArray;
+}
+
+function buildButtonGrid(gridSize){
+	var gridSize = parseInt(gridSize);
+	var elementInputs = document.getElementsByTagName("input");
+	var e = document.body.children[2].children[4].children[0];
+	var buttonCounter = 0;
+	window.resetable = true;
+
+	$(".title").fadeOut(750);
+	if(window.statsOpen == true){
+		$(".stats").fadeOut(750);
+	}
+	$(".contentWrap").fadeOut(750);
+	$(elementInputs).fadeOut(750);
+
+	setTimeout(function(){
+		$(elementInputs).remove();
+		elementInputs = null;
+		$(".title").html("Score: " + window.score + ", High Score: " + window.highScore ).hide().fadeIn(750);
+		if(window.statsOpen == true){
+			updateStats();
+			$(".stats").hide().fadeIn(750);
+		}
+		for(var rowCounter = 0; rowCounter &amp;lt; 5; rowCounter++){
+	        var row = document.createElement("div");
+	        row.className = "row";
+			for(var buttonCellCounter = 1; buttonCellCounter &amp;lt;= (gridSize / 5); buttonCellCounter++){
+				buttonCounter++;
+				buttonCell = document.createElement("input");
+				buttonCell.type = "button";
+				buttonCell.style.cssFloat = 'left';
+				buttonCell.value = buttonCounter;
+				buttonCell.id = "clickSelection" + buttonCounter;
+				buttonCell.onclick = function(){buttonPress(this.id, this.value);};
+				row.appendChild(buttonCell);
+			}
+			e.appendChild(row);
+		}
+		$(".contentWrap").hide().fadeIn(750);
+		$(".content").hide().fadeIn(750);
+	}, 750);
+}
+
+function buttonPress(buttonId, buttonValue){
+	var buttonClicked = document.getElementById(buttonId);
+	var comparisonArray = window.comparisonArray;
+	window.buttonClicks = window.buttonClicks +1;
+
+	if (buttonValue != comparisonArray[buttonValue]){
+		clickScore();
+		buttonClicked.disabled = true;
+		buttonClicked.style.backgroundColor = '759999';
+		buttonClicked.style.color = '#FFFFFF';
+	}
+	else {
+		window.winStreak = 0;
+
+		for(var i = 1; i &amp;lt; window.gridSize + 1; i++){
+			buttonToDisable = document.getElementById("clickSelection" + i);
+			if (buttonToDisable != buttonClicked){
+				buttonToDisable.disabled = true;
+				buttonToDisable.style.backgroundColor = '759999';
+				buttonToDisable.style.color = '#FFFFFF';
+			}else{
+				buttonToDisable.disabled = true;
+				buttonToDisable.style.backgroundColor = '#FF826F';
+				buttonToDisable.style.color = '#FFFFFF';
+			}
+		}
+		window.gamesPlayed = window.gamesPlayed + 1;
+		endGame();
+	}
+
+	if(window.score == window.gridSize){
+		window.wins = window.wins + 1;
+		window.winStreak = window.winStreak + 1;
+		window.gamesPlayed = window.gamesPlayed + 1;
+
+		if(window.winStreak == window.easterEgg){
+			easterEgg();
+		}
+		endGame();
+	}
+}
+
+function clickScore(){
+	window.score = window.score + 1;
+	tempScore = window.score;
+
+	$(".stats").html("Buttons Clicked: " + window.buttonClicks + ", Games Played: " + window.gamesPlayed + ", Wins: " + window.wins + ", Win Streak: " + window.winStreak);
+
+	if(tempScore == 0){
+		window.highScore = 0;
+		$(".title").html("Score: " + window.score + ", High Score: " + window.highScore );
+	}else if(window.highScore &amp;lt; tempScore){
+		window.highScore = tempScore;
+		$(".title").html("Score: " + window.score + ", High Score: " + window.highScore );
+	}else{
+		window.highScore = window.highScore;
+		$(".title").html("Score: " + window.score + ", High Score: " + window.highScore );
+	}
+}
+
+function clickStats(){
+	window.statsOpen = true;
+
+	if($(".stats").is(':visible')){
+		window.statsOpen = false;
+		$(".stats").slideUp(350);
+	}else{
+		$(".stats").slideDown(350);
+	}
+	$(".stats").html("Buttons Clicked: " + window.buttonClicks + ", Games Played: " + window.gamesPlayed + ", Wins: " + window.wins + ", Win Streak: " + window.winStreak);
+}
+
+function updateStats(){
+	$(".stats").html("Buttons Clicked: " + window.buttonClicks + ", Games Played: " + window.gamesPlayed + ", Wins: " + window.wins + ", Win Streak: " + window.winStreak);
+}
+
+function endGame(){
+	var elementInputs = document.getElementsByTagName("input");
+	window.endGameBool = true;
+
+	$(".title").fadeOut(1250);
+	if(window.statsOpen == true){
+		$(".stats").fadeOut(1250);
+	}
+	$(".contentWrap").fadeOut(1250);
+	$(elementInputs).fadeOut(1250);
+
+	setTimeout(function(){
+		$(elementInputs).remove();
+		elementInputs = null;
+		$(".row").remove();
+
+		$(".title").html("Final Score: " + window.score + ", High Score: " + window.highScore ).hide().fadeIn(1250);
+		if(window.statsOpen == true){
+			$(".stats").hide().fadeIn(1250);
+			updateStats();
+		}
+
+		if(window.score == window.gridSize){
+			endMessage = document.createElement("h2");
+			endMessage.id = 'endMessage';
+			endMessage.className = 'endMessage';
+			endMessage.style.textAlign = 'center';
+			endMessage.innerHTML = "You're the Winner!";
+			$(".contentWrap").hide().fadeIn(1250);
+			$(".content").append($(endMessage)).hide().fadeIn(1250);
+		}else{
+			endMessage = document.createElement("h2");
+			endMessage.id = 'endMessage';
+			endMessage.className = 'endMessage';
+			endMessage.style.textAlign = 'center';
+			endMessage.innerHTML = "You've Lost.";
+			$(".contentWrap").hide().fadeIn(1250);
+			$(".content").append($(endMessage)).hide().fadeIn(1250);
+		}
+
+		stats = document.createElement("input");
+		stats.type = "button";
+		stats.style.cssFloat = 'left';
+		stats.style.width = '100px';
+		stats.value = "View Stats";
+		stats.onclick = function(){clickStats();};
+		$(".contentWrap").hide().fadeIn(1250);
+		$(".content").append($(stats)).hide().fadeIn(1250);
+
+		reset = document.createElement("input");
+		reset.type = "button";
+		reset.style.cssFloat = 'left';
+		reset.style.width = '100px';
+		reset.value = "Try Again";
+		reset.onclick = function(){clickReset();};
+		$(".contentWrap").hide().fadeIn(1250);
+		$(".content").append($(reset)).hide().fadeIn(1250);
+
+		newGame = document.createElement("input");
+		newGame.type = "button";
+		newGame.style.cssFloat = 'left';
+		newGame.style.width = '100px';
+		newGame.value = "New Game";
+		newGame.onclick = function(){clickNewGame();};
+		$(".contentWrap").hide().fadeIn(1250);
+		$(".content").append($(newGame)).hide().fadeIn(1250);
+
+		quit = document.createElement("input");
+		quit.type = "button";
+		quit.style.cssFloat = 'left';
+		quit.style.width = '100px';
+		quit.value = "Quit";
+		quit.onclick = function(){document.location.href = "http://ianhutchcraft.com/";};
+		$(".contentWrap").hide().fadeIn(1250);
+		$(".content").append($(quit)).hide().fadeIn(1250);
+	}, 1250);
+}
+
+function clickReset(){
+	if(window.resetable == true){
+		var elementInputs = document.getElementsByTagName("input");
+		var endMessage = document.getElementById("endMessage");
+
+		$(".stats").html("Buttons Clicked: " + window.buttonClicks + ", Games Played: " + window.gamesPlayed + ", Wins: " + window.wins + ", Win Streak: " + window.winStreak);
+
+		$("title").fadeOut(750);
+		if(window.statsOpen == true){
+			$(".stats").fadeOut(750);
+		}
+		$(".contentWrap").fadeOut(750);
+		$(elementInputs).fadeOut(750);
+
+		if(elementInputs.length &amp;gt; 9 || window.endGameBool == true){
+			setTimeout(function(){
+				$(elementInputs).remove();
+				elementInputs - null;
+				$(endMessage).remove();
+				endMessage = null;
+
+				window.score = 0;
+				window.endGameBool = false;
+				buildComparisonArray(window.gridSize);
+				buildButtonGrid(window.gridSize);
+			}, 750);
+		}else{
+			this.clickNewGame();
+		}
+	} else{
+		$.jAlert({
+		    'title': 'Sorry',
+		    'content': 'You can\'t reset the game until after a difficulty and grid size has been selected.',
+		    'theme': 'blue',
+		    'closeOnClick': true,
+		});
+	}
+}
+
+function clickNewGame(){
+	var elementInputs = document.getElementsByTagName("input");
+	var endMessage = document.getElementById("endMessage");
+	window.highScore = 0;
+	window.score = 0;
+	window.resetable = false;
+
+	$(".title").fadeOut(750);
+	if(window.statsOpen == true){
+		$(".stats").fadeOut(750);
+	}
+	$(".contentWrap").fadeOut(750);
+	$(elementInputs).fadeOut(750);
+
+	setTimeout(function(){
+		$(elementInputs).remove();
+		elementInputs = null;
+		$(endMessage).remove();
+		endMessage = null;
+
+		$(".title").html("Set Difficulty").hide().fadeIn(750);
+		if(window.statsOpen == true){
+			$(".stats").html("Buttons Clicked: " + window.buttonClicks + ", Games Played: " + window.gamesPlayed + ", Wins: " + window.wins + ", Win Streak: " + window.winStreak).hide().fadeIn(750);
+		}
+
+		easyButton = document.createElement("input");
+		easyButton.type = "button";
+		easyButton.style.cssFloat = 'left';
+		easyButton.style.width = '100px';
+		easyButton.value = "Easy";
+		easyButton.id = "4";
+		easyButton.onclick = function(){setDifficulty(this.id, this.value.toLowerCase());};
+		$(".contentWrap").hide().fadeIn(750);
+		$(".content").append($(easyButton)).hide().fadeIn(750);
+
+		mediumButton = document.createElement("input");
+		mediumButton.type = "button";
+		mediumButton.style.cssFloat = 'left';
+		mediumButton.style.width = '100px';
+		mediumButton.value = "Medium";
+		mediumButton.id = "3";
+		mediumButton.onclick = function(){setDifficulty(this.id, this.value.toLowerCase());};
+		$(".contentWrap").hide().fadeIn(750);
+		$(".content").append($(mediumButton)).hide().fadeIn(750);
+
+		hardButton = document.createElement("input");
+		hardButton.type = "button";
+		hardButton.style.cssFloat = 'left';
+		hardButton.style.width = '100px';
+		hardButton.value = "Hard";
+		hardButton.id = "2";
+		hardButton.onclick = function(){setDifficulty(this.id, this.value.toLowerCase());};
+		$(".contentWrap").hide().fadeIn(750);
+		$(".content").append($(hardButton)).hide().fadeIn(750);
+
+		insanityButton = document.createElement("input");
+		insanityButton.type = "button";
+		insanityButton.style.cssFloat = 'left';
+		insanityButton.style.width = '100px';
+		insanityButton.value = "Insanity";
+		insanityButton.id = "1";
+		insanityButton.onclick = function(){setDifficulty(this.id, this.value.toLowerCase());};
+		$(".contentWrap").hide().fadeIn(750);
+		$(".content").append($(insanityButton)).hide().fadeIn(750);
+	}, 750);
+}
+
+function instructions(){
+	$.jAlert({
+		'title': 'Instructions',
+		'content': 'It\'s simple! Select a difficulty,  a grid size, and then click away at those buttons. It\'s really all up to the luck of the draw. Click the wrong button, and it\'s game over!',
+		'theme': 'blue',
+		'closeOnClick': true,
+	});
+}
+
+function easterEgg(){
+	e = document.body.childNodes[1].childNodes[1];
+	easterEgg = document.createElement("img");
+	easterEgg.id = 'egg';
+	easterEgg.src = 'buttonClicks/imagery/easterEgg.png';
+	easterEgg.style.cssFloat = 'right';
+	easterEgg.style.display = 'block';
+	easterEgg.style.position = 'absolute';
+	e.appendChild(easterEgg);
+	$('#egg').hide().fadeIn(300).fadeOut(300);
+	setTimeout(function(){
+		$('#egg').remove();
+		easterEgg = null;
+	}, 350);
+}
+			</pre>
+		</div>
+      </div>
+    </div>
+  </div>
+  <p style="color:#ffffff;">Source syntax highlighting was done using google code-prettify.</p>
+</div>
+</body>
+</html>

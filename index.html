@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+<title>Ian Hutchcraft</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="icon" type="image/PNG" href="favicon.ico">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+body, html {
+    height: 100%;
+    line-height: 1.8;
+}
+/* Full height image header */
+.bgimg-1 {
+    background-position: center;
+    background-size: cover;
+    background-image: url("/w3images/mac.jpg");
+    min-height: 100%;
+}
+.w3-bar .w3-button {
+    padding: 16px;
+}
+
+@media(max-width:767px){
+    .image1 {
+        display: block!important;
+    }
+    .image2 {
+        display: none !important;
+    }
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    font-size: 10px;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+</style>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-card" id="myNavbar">
+    <a href="index.html#home" class="w3-bar-item w3-button w3-wide">IAN HUTCHCRAFT</a>
+    <!-- Right-sided navbar links -->
+    <div class="w3-right w3-hide-small">
+      <a href="index.html#home" class="w3-bar-item w3-button"><i class="fa fa-user-o"></i> ABOUT</a>
+      <a href="index.html#work" class="w3-bar-item w3-button"><i class="fa fa-laptop"></i> WORK</a>
+      <div class="w3-dropdown-hover w3-hide-small">
+	    <a href="index.html#examples"><button class="w3-button" title="Notifications"><i class="fa fa-keyboard-o"></i> EXAMPLES <i class="fa fa-caret-down"></i></button></a>
+	    <div class="w3-dropdown-content w3-card-4 w3-bar-block">
+	      <a href="space-defense.html" class="w3-bar-item w3-button">Space Defense Force 9 Game</a>
+	      <a href="button-clicks.html" class="w3-bar-item w3-button">Button Clicks Game</a>
+	      <a href="button-clicks-source.html" class="w3-bar-item w3-button">Button Clicks Source</a>
+	    </div>
+	  </div>
+	  <a href="index.html#projects" class="w3-bar-item w3-button"><i class="fa fa-mortar-board"></i> PROJECTS</a>
+	  <a href="index.html#hobbies" class="w3-bar-item w3-button"><i class="fa fa-wrench"></i> HOBBIES</a>
+      <a href="index.html#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
+    </div>
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
+
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+  <a href="index.html#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
+  <a href="index.html#work" onclick="w3_close()" class="w3-bar-item w3-button">WORK</a>
+  <a href="index.html#examples" onclick="w3_close()" class="w3-bar-item w3-button">EXAMPLES</a>
+  <a href="index.html#projects" onclick="w3_close()" class="w3-bar-item w3-button">PROJECTS</a>
+  <a href="index.html#hobbies" onclick="w3_close()" class="w3-bar-item w3-button">HOBBIES</a>
+  <a href="index.html#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+</nav>
+
+<!-- Header with full-height image -->
+<header class="bgimg-1 w3-display-container w3-grayscale-min" style="background-color:#d2d4d8;" id="home">
+  <div class="w3-display-left w3-text-white" style="padding:48px;background-color:#9e9fa3;">
+    <span class="w3-large">I'm a full stack web developer, and computer/programming/electronics/video game/automotive/racing hobbyist.</span>
+    <p><a href="#work" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Check out what I do</a></p>
+  </div>
+  <div class="w3-display-bottomright w3-text-grey w3-large" style="padding:24px 48px">
+    <img style="border-radius:50%;" src="images/me.png" class="image2">
+  </div>
+</header>
+
+<!-- Work Section -->
+<div class="w3-container" style="padding:128px 16px" id="work">
+  <h3 class="w3-center">WORK</h3>
+  <p class="w3-center w3-large">Current and previous responsibilities</p>
+  <div class="w3-row-padding w3-center" style="margin-top:64px">
+    <div class="w3-quarter">
+      <i class="fa fa-desktop w3-margin-bottom w3-jumbo w3-center"></i>
+      <p class="w3-large">Front End Development</p>
+      <p>The majority of my professional development has been done using the Sencha ExtJS framework. I've used ExtJS to help create, update, and maintain several large scale financial modeling web applications for the US Navy.</p>
+      <p>Occasionally, I've used HTML4, HTML5, CSS, JavaScript, jQuery, React, and several plug ins and other frameworks, however, these have generally been used for personal projects or as learning opportunities.</p>
+    </div>
+    <div class="w3-quarter">
+      <i class="fa fa-hdd-o w3-margin-bottom w3-jumbo"></i>
+      <p class="w3-large">Back End Development</p>
+      <p>Almost all of my back end development experience has been with ColdFusion 9, 10, and 11. I have dabbeled in PHP and Node.js in my spare time as well. My experience with ColdFusion has taught me a lot about CRUD processes, data manipulation, data migration, data storage, and optimization.</p>
+      <p>Professionally, my responsibilities often involve the creation of both the front end and back end portions of an application, allowing me to become very familiar with the communication that takes place between both sides. </p>
+    </div>
+    <div class="w3-quarter">
+      <i class="fa fa-clipboard w3-margin-bottom w3-jumbo"></i>
+      <p class="w3-large">Database</p>
+      <p>The bulk of my database experince is with MSSQL, though I do have some experience using MySQL and Oracle.</p>
+      <p>I've been responsible for creating, modifying, updating and deleting data using SQL, creating indexes, creating synonyms, creating views, and updating stored procedures. Much of this has been done using ORM with ColdFusion, though occationally changes have needed to be done directly in MSSQL itself. </p>
+    </div>
+    <div class="w3-quarter">
+      <i class="fa fa-edit w3-margin-bottom w3-jumbo"></i>
+      <p class="w3-large">Other Responsibilities</p>
+      <p>Thanks to the relatively small size of my current office, I've had the opportunity to learn many skills performed by other team members I work closely with.</p>
+      <p>I've been responsible for gathering and documenting customer requirements, creating software requirements specifications and system design documents, creating and assigning tasks in Jira, creating estimates for tasks, documenting processes (often using Confluence), QA testing, developing QA test cases, code/peer reviewing teammate's code, and creating and promoting builds using Jenkins.</p>
+    </div>
+    <div class="w3-third">
+    	<p class="w3-large"></p>
+    </div>
+    <div class="w3-third">
+      <i class="fa fa-phone w3-margin-bottom w3-jumbo"></i>
+      <p class="w3-large">Support</p>
+      <p>For roughly 3 years I worked at a large call center providing teirs 1, 2, and 3 tech support for the Navy and Marine Corps. My time there allowed me to learn a lot about customer service, as well as, troubleshooting network, file server, print server, exchange server, OS, hardware, and various software issues. </p>
+      <p>This time on the helpdesk also allowed me the ability to learn how to automate processes using Batch scripts and create small applications using Batch files and VBS.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Examples Section -->
+<div class="w3-container w3-light-grey" style="padding:128px 16px" id="examples">
+  <h3 class="w3-center">EXAMPLES</h3>
+  <p class="w3-center w3-large">A few small projects I've completed in the past in my spare time.</p>
+  <div class="w3-row-padding w3-grayscale" style="margin-top:64px">
+    <div class="w3-col l4 m6 w3-margin-bottom">
+      <div class="w3-card">
+        <img src="images/spaceDefenseImg.png" alt="spaceDefense" style="width:100%">
+        <div class="w3-container">
+          <h3>Space Defense Force 9</h3>
+          <p class="w3-opacity">First Release Game</p>
+          <p>The first game I released to the public many years ago. At the time, having never created a Space Invaders clone, I thought I would give it a shot. It was developed using Game Maker using some scripts and some game engine tools. Total development time was only about 10-12 hours, including, concept, design, art, development, sound effect, and export of the executable.</p>
+          <p><a href="space-defense.html" style="text-decoration: none;"><button class="w3-button w3-light-grey w3-block"><i class="fa fa-play-circle-o"></i> Play</button></a></p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col l4 m6 w3-margin-bottom">
+      <div class="w3-card">
+        <img src="images/buttonClicksImg.png" alt="buttonClicks" style="width:100%">
+        <div class="w3-container">
+          <h3>Button Clicks</h3>
+          <p class="w3-opacity">Second Release Game</p>
+          <p>The second game I completed and released to the public. As far as games go, it's not a very good one and it's definitely not fun, but it was a great exercise in developing something from scratch and sticking to the projects original scope. </p>
+          <p><a href="button-clicks.html" style="text-decoration: none;"><button class="w3-button w3-light-grey w3-block"> <i class="fa fa-play-circle-o"></i> Play</button></a></p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col l4 m6 w3-margin-bottom">
+      <div class="w3-card">
+        <img src="images/codeImg.png" alt="Mike" style="width:100%">
+        <div class="w3-container">
+          <h3>Button Clicks Source</h3>
+          <p class="w3-opacity">Game Source Code</p>
+          <p>A view of the source code used when developing the Button Clicks game. This has been updated once before, and it could likely be optimized even more.</p>
+          <p><a href="button-clicks-source.html" style="text-decoration: none;"><button class="w3-button w3-light-grey w3-block"><i class="fa fa-book"></i> View</button></a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Current Projects Section -->
+<div class="w3-container" style="padding:128px 16px" id="projects">
+  <h3 class="w3-center">CURRENT PROJECTS</h3>
+  <p class="w3-center w3-large">Things I'm currently working on or learning when I get a few minutes.</p>
+  <div class="w3-row-padding w3-grayscale" style="margin-top:64px">
+
+    <div class="w3-col l4 m6 w3-margin-bottom">
+      <div class="w3-card">
+        <img src="images/DumbCodeBlog.png" alt="dumbcode.dev" style="width:100%">
+        <div class="w3-container">
+          <h3>DumbCode.dev Blog</h3>
+          <p class="w3-opacity">Learning through experimentation</p>
+          <p>A blog built in bootstrap to host the weird small projects that I come up with when I'm bored.</p>
+          <p><a href="https:\\dumbcode.dev" style="text-decoration: none;"><button class="w3-button w3-light-grey w3-block"><i class="fa fa-book"></i>View</button></a></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="w3-col l4 m6 w3-margin-bottom">
+      <div class="w3-card">
+        <img src="images/NodeJSTutorial.png" alt="nodejs" style="width:100%">
+        <div class="w3-container">
+          <h3>Learning Node.js, Express, and MongoDB</h3>
+          <p class="w3-opacity">Expanding my knowledge of languages</p>
+          <p>A simple user page to add, edit, delete, and read user information. This started with a tutorial for viewing, adding, and deleting a user, then I updated it to include the ability to edit a user and added a little more validation. I'm still working on improving and learning more with Node.js, Express, and MongoDB. Attached are a few snippets of code I've updated or written.</p>
+          <p><a href="node-tutorial-source.html" style="text-decoration: none;"><button class="w3-button w3-light-grey w3-block"><i class="fa fa-book"></i>View</button></a></p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Hobbies Section -->
+<div class="w3-container w3-light-grey" style="padding:128px 16px" id="hobbies">
+  <h3 class="w3-center">HOBBIES</h3>
+  <p class="w3-center w3-large">What I do in my spare time</p>
+
+  <div class="w3-row-padding" style="margin-top:64px">
+    <div class="w3-col l3 m6">
+      <img src="images/buttonClicksImg.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Game Development">
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="images/games.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Play Video Games (PC not pictured)">
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="images/repair.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Electronics and Electronic Repair">
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="images/carmod.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Car Fabrication/Modification">
+    </div>
+  </div>
+
+  <div class="w3-row-padding w3-section">
+    <div class="w3-col l4 m6">
+      <img src="images/carrepair.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Car Repair">
+    </div>
+    <div class="w3-col l4 m6">
+      <img src="images/laurel.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Really, Just Cars in General">
+    </div>
+    <div class="w3-col l4 m6">
+      <img src="images/dev.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="And of Course Programming!">
+    </div>
+  </div>
+</div>
+
+<!-- Modal for full size images on click-->
+<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+  <span class="w3-button w3-xxlarge w3-black w3-padding-large w3-display-topright" title="Close Modal Image">×</span>
+  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+    <img id="img01" class="w3-image">
+    <p id="caption" class="w3-opacity w3-large"></p>
+  </div>
+</div>
+
+<!-- Contact Section -->
+<div class="w3-container" style="padding:128px 16px" id="contact">
+  <h3 class="w3-center">CONTACT</h3>
+  <p class="w3-center w3-large">Let's get in touch. Send me a message:</p>
+  <div class="w3-row-padding" style="margin-top:64px">
+    <div class="w3-half">
+      <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Chesapeake, VA</p>
+      <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> 757 &middot; 719 &middot; 2793</p>
+      <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> <a href="mailto:ianhutchcraft@gmail.com">ianhutchcraft@gmail.com</a></p>
+      <br>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64">
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <div class="w3-xlarge w3-section">
+    <a href="https://www.instagram.com/moosesharkgames/"><i class="fa fa-instagram w3-hover-opacity"></i></a>
+    <a href="https://www.linkedin.com/in/ian-hutchcraft-2b547b2a/"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
+
+  </div>
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+</footer>
+
+<script>
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+
+// Toggle between showing and hiding the sidebar when clicking the menu icon
+var mySidebar = document.getElementById("mySidebar");
+
+function w3_open() {
+    if (mySidebar.style.display === 'block') {
+        mySidebar.style.display = 'none';
+    } else {
+        mySidebar.style.display = 'block';
+    }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+}
+</script>
+</body>
+</html>

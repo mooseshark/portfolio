@@ -1,0 +1,89 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Ian Hutchcraft: Button Clicks</title>
+	<link href="buttonClicks/buttonClicksStyleSheet.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="buttonClicks/jAlert-master/src/jAlert-v3.css" />
+	<script src="buttonClicks/jquery-2.1.4.min.js"></script>
+	<script src="buttonClicks/jAlert-master/src/jAlert-v3.js"></script>
+	<script src="buttonClicks/jAlert-master/src/jAlert-functions.js"></script>
+	<script type="text/javascript" src="buttonClicks/buttonClicks.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-card" id="myNavbar">
+    <a href="index.html#home" class="w3-bar-item w3-button w3-wide">IAN HUTCHCRAFT</a>
+    <!-- Right-sided navbar links -->
+    <div class="w3-right w3-hide-small">
+      <a href="index.html#about" class="w3-bar-item w3-button"><i class="fa fa-user-o"></i> ABOUT</a>
+      <a href="index.html#work" class="w3-bar-item w3-button"><i class="fa fa-laptop"></i> WORK</a>
+      <div class="w3-dropdown-hover w3-hide-small">
+	    <a href="index.html#examples"><button class="w3-button" title="Notifications"><i class="fa fa-keyboard-o"></i> EXAMPLES <i class="fa fa-caret-down"></i></button></a>     
+	    <div class="w3-dropdown-content w3-card-4 w3-bar-block">
+	      <a href="space-defense.html" class="w3-bar-item w3-button">Space Defense Force 9 Game</a>
+	      <a href="button-clicks.html" class="w3-bar-item w3-button">Button Clicks Game</a>
+	      <a href="button-clicks-source.html" class="w3-bar-item w3-button">Button Clicks Source</a>
+	    </div>
+	  </div>
+	  <a href="index.html#projects" class="w3-bar-item w3-button"><i class="fa fa-mortar-board"></i> PROJECTS</a>
+	  <a href="index.html#hobbies" class="w3-bar-item w3-button"><i class="fa fa-wrench"></i> HOBBIES</a>
+      <a href="index.html#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
+    </div>
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
+
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+  <a href="index.html#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
+  <a href="index.html#work" onclick="w3_close()" class="w3-bar-item w3-button">WORK</a>
+  <a href="index.html#examples" onclick="w3_close()" class="w3-bar-item w3-button">EXAMPLES</a>
+  <a href="index.html#projects" onclick="w3_close()" class="w3-bar-item w3-button">PROJECTS</a>
+  <a href="index.html#hobbies" onclick="w3_close()" class="w3-bar-item w3-button">HOBBIES</a>
+  <a href="index.html#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+</nav>
+
+<!-- Begin game container -->
+	<div class="container">
+		<div class="menuDiv" style="float: right">	
+			<ul class="menu">
+	  			<li>
+	  				<a href="#"><img class="menuImage" src="buttonClicks/imagery/menuButton.png" /></a>
+	  				<ul>
+	  					<li><span><a href="#"  class="menuItem" value="Instructions" onclick="instructions();">Instructions</a></span></li>
+	  					<li><span><a href="#"  class="menuItem" value="Stats" onclick="clickStats();">Stats</a></span></li>
+	  					<li><span><a href="#"  class="menuItem" value="Reset" onclick="clickReset();">Reset</a></span></li>
+						<li><span><a href="#"  class="menuItem" value="New Game" onclick="clickNewGame();">New Game</a></span></li>
+						<li><span><a href="http://ianhutchcraft.com/"  class="menuItem" value="Quit">Quit</a></span></li>
+	  				</ul>
+	  			</li>
+	  		</ul>
+		</div>
+		<header style="text-align: center">Button Clicks</header>
+	  	<h2 style="text-align: center" class="title">Set Difficulty</h2>
+	  	<h3 style="text-align: center" class="stats"></h3>
+	  	<article class="contentWrap">
+			<article class="content">
+				<input id="easy" type="button" value="Easy" onclick="setDifficulty(this.id);" style="float: left; width: 110px;" />
+				<input id="medium" type="button" value="Medium" onclick="setDifficulty(this.id);" style="float: left; width: 110px;" />
+				<input id="hard" type="button" value="Hard" onclick="setDifficulty(this.id);" style="float: left; width: 110px;" />
+				<input id="insanity" type="button" value="Insanity" onclick="setDifficulty(this.id);" style="float: left; width: 110px;" />
+				<div class="instructions"></div>
+			
+			</article>
+		</article>
+	</div>
+</body>
+</html>
